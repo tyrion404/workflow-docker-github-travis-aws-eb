@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t xscotophilic/workflow-docker-github-travis-aws-eb -f Dockerfile .
+  - docker build -t xscotophilic/workflow-docker-github-travis-aws-eb -f Dockerfile.dev .
 
 script:
   - docker run xscotophilic/workflow-docker-github-travis-aws-eb npm run test -- --coverage
