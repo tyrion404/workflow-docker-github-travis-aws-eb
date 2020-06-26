@@ -1,5 +1,5 @@
 {
-  "name": "workflow-github-tarvis-aws-eb",
+  "name": "workflow-github-travis-aws-eb",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
