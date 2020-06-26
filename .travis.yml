@@ -6,4 +6,4 @@ before_install:
   - docker build -t xscotophilic/workflow-docker-github-travis-aws-eb -f Dockerfile.dev .
 
 script:
-  - docker run xscotophilic/workflow-docker-github-travis-aws-eb npm run test -- --coverage
+  - docker run -e CI=true xscotophilic/workflow-docker-github-travis-aws-eb npm run test
