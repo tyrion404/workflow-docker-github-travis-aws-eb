@@ -7,3 +7,15 @@ before_install:
 
 script:
   - docker run -e CI=true xscotophilic/workflow-docker-github-travis-aws-eb npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-east-1'
+  app: 'workflow-docker-github-travis-aws-eb'
+  env: 'WorkflowDockerGithubTravisAwsEb-env'
+  bucket_name: 'elasticbeanstalk-us-east-1-626478535714'
+  bucket_path: 'workflow-docker-github-travis-aws-eb'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
